@@ -1,0 +1,327 @@
+
+//archivos secundarios
+@import "./components/reset";
+@import "./components/variables";
+/*Estilo de la barra de navegacion*/
+body{
+    display: block;
+    background: linear-gradient(#ffffff,$color-peluperros) ;
+    background-image: url(../img/fondoBody.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    .Navegacion {
+        display: flex;
+        align-items: center;}
+    .logo img {
+        height: 140px;
+        width: 220px;
+        border-radius: 25%;}
+
+    .menuNavegacion{/* CSS PARA LA BARRA DE NAVEGACION */
+        font-size: 1.3rem;
+        text-align: left;
+        width: 100%;
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 2px;
+            transition: 0.3s;
+        }
+    } 
+    ul{
+        padding: 0px;
+        li{
+            margin: 2px;
+        }
+    }/* padding 0 es para corregir el q da bootstrap*/
+    
+    .menuNavegacion a:hover{
+    background-color: #ccc;
+    color: #f3a3d3;}    
+    }
+
+
+/* CSS DEL VIDEO*/
+.video-celu{
+    padding: 5px;
+    position: relative;
+            #miVideo{
+            width: 97vw; /*descubri que cuando se le borra una de las propiedades de alto o ancho el video se vuelve mas responsive porque la propiedad min-whidith o min-haigth tiene menos resticciones pero si se borran las dos propiedades de alto y ancho se rompe el codigo*/
+            min-height: 100%;
+            min-width: 100%;
+            border: solid 3px violet;
+            margin: 0px;            
+        }
+}
+    /* BANNER*/
+    .baner{
+        position: absolute;
+        text-align: center;
+        bottom: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 97vw;
+        padding: 20px;
+        font-size: x-large;        
+    }
+    /* CSS DEL CONTENIDO*/
+
+.aqueNosDedicamos {
+    padding: 5px;
+}
+.queHacemos{
+    text-align: center;
+}
+.aqueNosDedicamos p {
+    text-align: justify;
+    padding: 3px;
+}
+.redesSociales {
+    display: block;
+    text-align: center;
+    gap: 10px;
+    a{
+        img{
+                margin: 1.3rem;
+                width: 50px;
+                height: 50px;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+}
+/* CSS PARA PRODUCTOS.HTML*/
+.producto {
+    display: inline-block;
+    padding:5px;
+    box-sizing: border-box;
+    position: relative;
+    }
+    .img_producto {
+        width:400px;
+        min-height: 100%;
+        min-width: 100%;
+    }
+    .img_producto img {
+        object-fit: cover;
+        width:100%;
+        height:100%;
+    }    
+    .txt_Producto {
+        position: relative;
+        text-align: center;
+        bottom: 15rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        font-size: large;
+        border-bottom: 3px solid $color-peluperros;
+        
+    }
+    /*CSS PARA PAGINA SOBRE_NOSOTROS.HTML*/
+    h2{
+        text-align: center;
+    }
+    .txt_Nosotros{
+        text-align: justify;
+        padding: 0 15px 0 15px;
+    }
+    .img_producto, .bookfotos {
+        margin:10px;
+        border: 2px solid $color-peluperros
+    }
+    iframe{
+
+        left:0;    
+        top:0;    
+        height:99vw;    
+        width:95%;    
+        position:relative;
+        padding-left: 10px;
+        margin-top: 10px;    
+    }
+    
+
+    /* MEDIA QUERIES PARA CELUS GRANDES Y TABLETS*/
+
+    @media only screen and ( min-width: 780px) {
+        
+        /*media para index*/
+        .video-celu{
+            #miVideo{
+                width: 780px;
+                height: 420PX;
+                border: none;
+            }
+        }
+        .baner{
+            font-size: x-large;
+            position: static;
+            color: black;
+            background: none;
+        }
+        .redesSociales a img{
+            margin-left: 5rem;
+            width: 70px;
+            height: 70px;
+        }
+        .aqueNosDedicamos p {
+            padding-left: 18px;
+            padding-top: 20px;
+        }
+/*MEDIA PARA PRODUCTOS*/
+        .img_producto {
+        border: none; 
+        text-align: center;    
+        }
+        .img_producto img {
+            width: 6    80px;
+            height: 420px;           
+        }
+        .txt_Producto {
+            width: 100%;
+            font-size: x-large;
+            position: static;
+            color: black;
+            background: none;
+        }
+        .nosotros {
+            padding: 10px;            
+        }
+    /* media para contactos*/
+
+    }
+    /*fin de media querie 768px*/
+
+        @media only screen and (min-width: 1000px){
+            
+            .productos_varios {
+                margin-top: 15px;
+            }
+            .img_producto {
+                border: none; 
+                text-align: left;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                }
+            .producto{
+                display: grid;
+                grid-template-columns: 1fr 1fr 0.2fr ;
+                grid-template-rows: 1fr;
+                row-gap: 10px;
+                align-items: end;
+                margin-left: 10px;               
+                
+            }
+            .img_producto img{
+                width: 1fr;
+                height: 400px;
+                }
+
+            .txt_Producto {
+                text-align: justify;
+                
+                }
+            .txt_Producto p {
+                
+                padding-bottom: 4rem;
+                
+            }
+            .nosotros{
+                align-items:start ;
+            }
+        .img_Nosotros{
+            text-align: center;
+            padding-top: 10px;
+        }
+        .txt_Nosotros{
+            padding-top: 10px;
+        }
+        .galeria{
+            display: grid;            
+            grid-template-columns: 1fr 0.3fr 1fr;
+            grid-template-rows: 80px 1fr min-content;
+        
+            grid-template-areas: 
+            "titulo titulo titulo"
+            "foto1 foto2 foto3"     
+            "fondo fondo fondo";
+            row-gap: 5px;
+            column-gap: 15px;
+            margin-left: 5px;
+            
+        }
+        .galeria div img {
+            width: 100%;
+            object-fit: auto;
+        }
+            
+        .titulo{
+            grid-area: titulo;
+            padding-top: 10px;
+        }
+
+        .foto1{
+            grid-area: foto1;
+            
+            }
+        .foto2{
+            grid-area: foto2;
+            border: solid 1px violet;
+            
+        }
+        .foto3{
+            grid-area: foto3;
+        
+        }
+        .fondo {
+            grid-area: fondo;
+            
+        }
+        .contacto-Mapa{
+            text-align: center;
+            margin-top: 20px;
+        }
+        .datos{
+            text-align: start;
+        }
+    } /* fin de la media para maquinas escritorio*/
+
+/* estilos para bootstrap*/
+.mio a{
+    color: inherit;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-align: center;
+    background-image: linear-gradient(#d5eb13, #db0707),
+    linear-gradient(transparent, transparent);
+    background-size: 0 2px, auto;
+    background-repeat: no-repeat;
+    background-position:  bottom;
+    transition: all 0.2s ease-out;
+
+}
+.mio a:hover{
+        color: $color-peluperros;
+        opacity: 0.6;
+        background-size: 100% 2px, auto;}
+.fondo-nav{
+    background-image: url(../img/fondoNav.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.logoP{
+    border-radius: 35%;
+    margin-right: 10px;
+}
