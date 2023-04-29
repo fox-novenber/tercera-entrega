@@ -8,6 +8,22 @@
   font-family: 'Roboto Slab', serif;
   box-sizing: border-box; }
 
+/* animacion para iconos de redes sociales*/
+.redesSociales a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+
+.redesSociales a:hover, .redesSociales a:focus, .redesSociales a:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36); }
+
 /*Estilo de la barra de navegacion*/
 body {
   display: block;
@@ -213,9 +229,7 @@ iframe {
     display: grid;
     grid-template-columns: 1fr 0.3fr 1fr;
     grid-template-rows: 80px 1fr min-content;
-    grid-template-areas: "titulo titulo titulo"
- "foto1 foto2 foto3"     
- "fondo fondo fondo";
+    grid-template-areas: "titulo titulo titulo" "foto1 foto2 foto3"      "fondo fondo fondo";
     row-gap: 5px;
     column-gap: 15px;
     margin-left: 5px; }
