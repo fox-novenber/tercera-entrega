@@ -3,6 +3,9 @@
 @import "./components/reset";
 @import "./components/variables";
 @import "./components/animacionRedes";
+@import "./components/mixin";
+@import "./components/extend";
+
 /*Estilo de la barra de navegacion*/
 body{
     display: block;
@@ -36,11 +39,11 @@ nav {
         }
     } 
     ul{
-        padding: 0px;
+        padding: 0px;/* padding 0 es para corregir el q da bootstrap*/
         li{
             margin: 2px;
         }
-    }/* padding 0 es para corregir el q da bootstrap*/
+    }
     
     .menuNavegacion a:hover{
     background-color: #ccc;
@@ -58,12 +61,12 @@ nav {
             min-width: 100%;
             border: solid 3px violet;
             margin: 0px;            
-        }
+            }   
 }
     /* BANNER*/
     .baner{
         position: absolute;
-        text-align: center;
+        @include centro-t;
         bottom: 20px;
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
@@ -85,7 +88,7 @@ nav {
 }
 .redesSociales {
     display: block;
-    text-align: center;
+    @include centro-t;
     gap: 10px;
     a{
         img{
@@ -118,7 +121,7 @@ footer {
     }    
     .txt_Producto {
         position: relative;
-        text-align: center;
+        @include centro-t;
         bottom: 15rem;
         background: rgba(0, 0, 0, 0.5);
         color: #f1f1f1;
@@ -141,7 +144,6 @@ footer {
         border: 2px solid $color-peluperros
     }
     iframe{
-
         left:0;    
         top:0;    
         height:99vw;    
@@ -150,9 +152,7 @@ footer {
         padding-left: 10px;
         margin-top: 10px;    
     }
-    
-
-    /* MEDIA QUERIES PARA CELUS GRANDES Y TABLETS*/
+        /* MEDIA QUERIES PARA CELUS GRANDES Y TABLETS*/
 
     @media only screen and ( min-width: 780px) {
         
@@ -162,7 +162,7 @@ footer {
                 width: 780px;
                 height: 420PX;
                 border: none;
-            }
+                }
         }
         .baner{
             font-size: x-large;
@@ -170,23 +170,32 @@ footer {
             color: black;
             background: none;
         }
-        .redesSociales a img{
-            margin-left: 5rem;
-            width: 70px;
-            height: 70px;
+        .redesSociales{
+            a{
+                img{
+                    margin-left: 5rem;
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+
         }
-        .aqueNosDedicamos p {
-            padding-left: 18px;
-            padding-top: 20px;
+        .aqueNosDedicamos {
+            p{
+                padding-left: 18px;
+                padding-top: 20px;
+            }
         }
 /*MEDIA PARA PRODUCTOS*/
         .img_producto {
         border: none; 
         text-align: center;    
         }
-        .img_producto img {
-            width: 6    80px;
-            height: 420px;           
+        .img_producto {
+            img{
+                width: 100%;
+                height: 420px;
+            }           
         }
         .txt_Producto {
             width: 100%;
@@ -194,7 +203,7 @@ footer {
             position: static;
             color: black;
             background: none;
-        }
+            }
         .nosotros {
             padding: 10px;            
         }
@@ -224,25 +233,27 @@ footer {
                 margin-left: 10px;               
                 
             }
-            .img_producto img{
-                width: 1fr;
-                height: 400px;
+            .img_producto {
+                img{
+                    width: 1fr;
+                    height: 400px;
+                }
                 }
 
             .txt_Producto {
                 text-align: justify;
                 
                 }
-            .txt_Producto p {
-                
-                padding-bottom: 4rem;
-                
+            .txt_Producto{
+                p{
+                    padding-bottom: 4rem;
+                }           
             }
             .nosotros{
                 align-items:start ;
             }
         .img_Nosotros{
-            text-align: center;
+            @include centro-t;
             padding-top: 10px;
         }
         .txt_Nosotros{
@@ -262,9 +273,13 @@ footer {
             margin-left: 5px;
             
         }
-        .galeria div img {
-            width: 100%;
-            object-fit: auto;
+        .galeria{
+            div{
+                img{            
+                    width: 100%;
+                    object-fit: auto;
+                }
+            }
         }
             
         .titulo{
@@ -295,27 +310,32 @@ footer {
         }
         .datos{
             text-align: start;
+            @extend %ancho;
         }
     } /* fin de la media para maquinas escritorio*/
 
 /* estilos para bootstrap*/
-.mio a{
-    color: inherit;
-    text-transform: uppercase;
-    transition: all 0.5s;
-    text-align: center;
-    background-image: linear-gradient(#d5eb13, #db0707),
-    linear-gradient(transparent, transparent);
-    background-size: 0 2px, auto;
-    background-repeat: no-repeat;
-    background-position:  bottom;
-    transition: all 0.2s ease-out;
-
+.mio {
+    a{
+        color: inherit;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        text-align: center;
+        background-image: linear-gradient(#d5eb13, #db0707),
+        linear-gradient(transparent, transparent);
+        background-size: 0 2px, auto;
+        background-repeat: no-repeat;
+        background-position:  bottom;
+        transition: all 0.2s ease-out;
+    }
 }
-.mio a:hover{
+.mio {
+    a:hover{
         color: $color-peluperros;
         opacity: 0.6;
-        background-size: 100% 2px, auto;}
+        background-size: 100% 2px, auto;
+    }
+}
 .fondo-nav{
     background-image: url(../img/fondoNav.jpg);
     background-size:cover;
