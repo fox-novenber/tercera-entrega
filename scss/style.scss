@@ -198,7 +198,7 @@ footer {
             }           
         }
         .txt_Producto {
-            width: 100%;
+            @extend %ancho;
             font-size: x-large;
             position: static;
             color: black;
