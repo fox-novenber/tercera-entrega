@@ -117,15 +117,14 @@ footer {
   position: relative; }
 
 .img_producto {
-  width: 94vw;
+  width: 400px;
   min-height: 100%;
-}
+  min-width: 100%; }
 
 .img_producto img {
   object-fit: cover;
-  width: 95vw;
-  height: 100%;
-  text-align: center;}
+  width: 100%;
+  height: 100%; }
 
 .txt_Producto {
   position: relative;
@@ -133,10 +132,25 @@ footer {
   bottom: 15rem;
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
-  width: 94%;
-  padding: 5px;
+  width: 100%;
+  padding: 20px;
   font-size: large;
   border-bottom: 3px solid #f3a3d3; }
+
+.targeta1 {
+  margin: 5px; }
+  .targeta1 img {
+    border-radius: 3%; }
+
+.targeta2 {
+  margin: 5px; }
+  .targeta2 img {
+    border-radius: 3%; }
+
+.targeta3 {
+  margin: 5px; }
+  .targeta3 img {
+    border-radius: 3%; }
 
 /*CSS PARA PAGINA SOBRE_NOSOTROS.HTML*/
 h1 {
@@ -147,9 +161,19 @@ h1 {
   padding: 0 15px 0 15px; }
 
 .img_producto, .bookfotos {
-  margin-left: 5px;
+  margin: 10px; }
+
+.img_Nosotros img {
+  width: 100%; }
+
+/*galeria.html*/
+.bookfotos img {
+  width: 95vw; }
+
+.foto2 img {
   border: 2px solid #f3a3d3; }
 
+/*contacto.html*/
 iframe {
   left: 0;
   top: 0;
@@ -224,15 +248,15 @@ iframe {
   .img_Nosotros {
     text-align: center;
     padding-top: 10px; }
+  .img_Nosotros img {
+    width: 50%; }
   .txt_Nosotros {
     padding-top: 10px; }
   .galeria {
     display: grid;
     grid-template-columns: 1fr 0.3fr 1fr;
     grid-template-rows: 80px 1fr min-content;
-    grid-template-areas: "titulo titulo titulo"
- "foto1 foto2 foto3"     
- "fondo fondo fondo";
+    grid-template-areas: "titulo titulo titulo" "foto1 foto2 foto3"      "fondo fondo fondo";
     row-gap: 5px;
     column-gap: 15px;
     margin-left: 5px; }
@@ -255,7 +279,8 @@ iframe {
     text-align: center;
     margin-top: 20px; }
   .datos {
-    text-align: start; } }
+    text-align: start;
+    width: 100%; } }
 
 /* fin de la media para maquinas escritorio*/
 /* estilos para bootstrap*/

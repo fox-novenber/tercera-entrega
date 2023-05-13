@@ -131,6 +131,24 @@ footer {
         border-bottom: 3px solid $color-peluperros;
         
     }
+    .targeta1{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
+    .targeta2{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
+    .targeta3{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
     /*CSS PARA PAGINA SOBRE_NOSOTROS.HTML*/
     h1{
         text-align: center;
@@ -141,8 +159,30 @@ footer {
     }
     .img_producto, .bookfotos {
         margin:10px;
-        border: 2px solid $color-peluperros
+        
     }
+    .img_Nosotros{
+        img{
+            width: 100%;
+        }
+    }
+    /*galeria.html*/
+    .bookfotos{
+        img{
+            width: 95vw;
+        }
+    }
+    
+        .foto2{
+            img{
+                border: 2px solid $color-peluperros;
+            }
+        }
+    
+
+
+
+    /*contacto.html*/
     iframe{
         left:0;    
         top:0;    
@@ -198,7 +238,7 @@ footer {
             }           
         }
         .txt_Producto {
-            @extend %ancho;
+            width: 100%;
             font-size: x-large;
             position: static;
             color: black;
@@ -256,6 +296,11 @@ footer {
             @include centro-t;
             padding-top: 10px;
         }
+        .img_Nosotros {
+            img{
+                width: 50%;
+            }
+        }
         .txt_Nosotros{
             padding-top: 10px;
         }
@@ -310,7 +355,7 @@ footer {
         }
         .datos{
             text-align: start;
-            @extend %ancho;
+            width: 100%;
         }
     } /* fin de la media para maquinas escritorio*/
 
