@@ -1,0 +1,32 @@
+/* estilos para bootstrap*/
+.mio {
+    a{
+        color: inherit;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        text-align: center;
+        background-image: linear-gradient(#d5eb13, #db0707),
+        linear-gradient(transparent, transparent);
+        background-size: 0 2px, auto;
+        background-repeat: no-repeat;
+        background-position:  bottom;
+        transition: all 0.2s ease-out;
+    }
+}
+.mio {
+    a:hover{
+        color: $color-peluperros;
+        opacity: 0.6;
+        background-size: 100% 2px, auto;
+    }
+}
+.fondo-nav{
+    background-image: url(../img/fondoNav.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.logoP{
+    border-radius: 35%;
+    margin-right: 10px;
+}

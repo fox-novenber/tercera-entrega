@@ -1,0 +1,185 @@
+/*Estilo de la barra de navegacion*/
+/*MOVILE FIRST*/
+body{
+    display: block;
+    background: linear-gradient(#ffffff,$color-peluperros) ;
+    background-image: url(../img/fondoBody.jpg);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    .Navegacion {
+        display: flex;
+        align-items: center;}
+    .logo img {
+        height: 140px;
+        width: 220px;
+        border-radius: 25%;}
+
+    .menuNavegacion{/* CSS PARA LA BARRA DE NAVEGACION */
+        font-size: 1.3rem;
+        text-align: left;
+        width: 100%;
+        a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 2px;
+            transition: 0.3s;
+        }
+    } 
+    ul{
+        padding: 0px;/* padding 0 es para corregir el q da bootstrap*/
+        li{
+            margin: 2px;
+        }
+    }
+    
+    .menuNavegacion a:hover{
+    background-color: #ccc;
+    color: #f3a3d3;}    
+    }
+
+
+/* CSS DEL VIDEO*/
+.video-celu{
+    padding: 5px;
+    position: relative;
+            #miVideo{
+            width: 97vw; /*descubri que cuando se le borra una de las propiedades de alto o ancho el video se vuelve mas responsive porque la propiedad min-whidith o min-haigth tiene menos resticciones pero si se borran las dos propiedades de alto y ancho se rompe el codigo*/
+            min-height: 100%;
+            
+            border: solid 3px violet;
+            margin: 0px;            
+            }   
+}
+    /* BANNER*/
+    .baner{
+        position: absolute;
+        @include centro-t;
+        bottom: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 97vw;
+        padding: 20px;
+        font-size: x-large;        
+    }
+    /* CSS DEL CONTENIDO*/
+
+.aqueNosDedicamos {
+    padding: 5px;
+}
+.queHacemos{
+    text-align: center;
+}
+.aqueNosDedicamos p {
+    text-align: justify;
+    padding: 3px;
+}
+.redesSociales {
+    display: block;
+    @include centro-t;
+    gap: 10px;
+    a{
+        img{
+                margin: 1.3rem;
+                width: 50px;
+                height: 50px;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+}
+/* CSS PARA PRODUCTOS.HTML*/
+.producto {
+    display: inline-block;
+    padding:5px;
+    box-sizing: border-box;
+    position: relative;
+    }
+    .img_producto {
+        width:400px;
+        min-height: 100%;
+        min-width: 100%;
+    }
+    .img_producto img {
+        object-fit: cover;
+        width:100%;
+        height:100%;
+    }    
+    .txt_Producto {
+        position: relative;
+        @include centro-t;
+        bottom: 15rem;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        font-size: large;
+        border-bottom: 3px solid $color-peluperros;
+        
+    }
+    .targeta1{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
+    .targeta2{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
+    .targeta3{
+        margin: 5px;
+        img{
+            border-radius: 3%;
+        }
+    }
+    /*CSS PARA PAGINA SOBRE_NOSOTROS.HTML*/
+    h1{
+        text-align: center;
+    }
+    .txt_Nosotros{
+        text-align: justify;
+        padding: 0 15px 0 15px;
+    }
+    .img_producto, .bookfotos {
+        margin:10px;
+        
+    }
+    .img_Nosotros{
+        img{
+            width: 100%;
+        }
+    }
+    /*galeria.html*/
+    .bookfotos{
+        img{
+            width: 95vw;
+        }
+    }
+    
+        .foto2{
+            img{
+                border: 2px solid $color-peluperros;
+            }
+        }
+    
+    /*contacto.html*/
+    iframe{
+        left:0;    
+        top:0;    
+        height:99vw;    
+        width:95%;    
+        position:relative;
+        padding-left: 10px;
+        margin-top: 10px;    
+    }
+        /* FIN DE MOVILE FIRST*/

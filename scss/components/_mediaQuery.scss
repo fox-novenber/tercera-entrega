@@ -1,0 +1,158 @@
+@include tablet {
+    /*media para index*/
+            .video-celu{
+                #miVideo{
+                    border: none;
+                    padding: 10px;
+                    }
+            }
+            .baner{
+                font-size: x-large;
+                position: static;
+                color: black;
+                background: none;
+            }
+            .redesSociales{
+                a{
+                    img{
+                        margin-left: 5rem;
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+            }
+            .aqueNosDedicamos {
+                p{
+                    padding-left: 18px;
+                    padding-top: 20px;
+                }
+            }
+        /*MEDIA PARA PRODUCTOS*/
+            
+        .img_producto {
+                img{
+                    width: 100%;                    
+                    padding: 10px;
+                    border: none;
+                }           
+            }
+            .nosotros {
+                padding: 10px;            
+            }
+        .targeta1{
+            margin: 20px;
+        }
+        .targeta2{
+            margin: 20px;
+        }
+        .targeta3{
+            margin: 20px;
+            img{
+                height: 73vw;
+            }
+        }
+    .img_Nosotros{
+        width: 80%;
+        margin: auto;
+    }
+        /*CONTACTO*/
+    iframe{
+        height: 85vw;
+        margin-left: 10px;
+    }
+
+
+}/*fin de media querie 768px*/
+
+@include escritorio {
+
+    .video-celu {
+            #miVideo{
+                    width: 94vw;
+                    margin-left: 2.5rem;
+        }
+    }   
+        .img_producto {
+            img{
+                width: 100%;
+            }
+        }
+        .txt_Producto {
+            text-align: justify;            
+        }
+        .txt_Producto{
+            p{
+                padding-bottom: 4rem;
+            }           
+        }
+        .nosotros{
+            align-items:start ;
+        }
+        /*nosotros*/
+    .img_Nosotros{
+        img{
+            width: 80%;
+        }
+        @include centro-t;
+        padding-top: 10px;
+    }
+    .txt_Nosotros{
+        padding-top: 10px;
+    }
+    .galeria{
+        display: grid;            
+        grid-template-columns: 1fr 0.8fr 1fr;
+        grid-template-rows: 80px 1fr min-content;
+    
+        grid-template-areas: 
+        "titulo titulo titulo"
+        "foto1 foto2 foto3"     
+        "fondo fondo fondo";
+        row-gap: 5px;
+        column-gap: 5px;
+        margin-left: 5px;
+        
+    }
+    
+    .galeria{
+        div{
+            img{            
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+        
+    .titulo{
+        grid-area: titulo;
+        padding-top: 10px;
+    }
+
+    .foto1{
+        grid-area: foto1;
+        
+        }
+    .foto2{
+        grid-area: foto2;
+        border: solid 1px violet;
+        
+    }
+    .foto3{
+        grid-area: foto3;
+    
+    }
+    .fondo {
+        grid-area: fondo;
+        
+    }
+    .contacto-Mapa{
+        text-align: center;
+        margin-top: 20px;
+    }
+    .datos{
+        text-align: start;
+        width: 100%;
+    }
+
+}
